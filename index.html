@@ -1,21 +1,228 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>My Bookmark Manager</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tell Me About Yourself</title>
 </head>
+
 <body>
-<h1>📚 My Bookmark Manager</h1>
-<h2>Primary Bookmarks</h2>
-<p>  <a href="https://www.google.com" target="_blank">  Google    </a> </p>
-<p>  <a href="https://www.youtube.com" target="_blank">    YouTube  </a>  </p>
- <p> <a href="https://www.github.com" target="_blank">      GitHub  </a>   </p
-<h2>Shopping Websites</h2>
-<p> <a href="https://www.amazon.in" target="_blank">   Amazon </a>  </p>
-<p>  <a href="https://www.flipkart.com" target="_blank"> Flipkart </a> </p>
- <p>  <a href="https://www.blinkit.com" target="_blank"> Blinkit   </a>  </p>
-<h3>About</h3>
-<p>   This webpage contains links to websites that I use every day.  </p>
-<p> Made by Tarana Joshi ❤️  </p>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+
+        <header>
+            <h1>Tell Me About Yourself</h1>
+        </header>
+
+        <main>
+
+            <section>
+                <h2>Personal Information</h2>
+
+                <div>
+                    <label for="username">Enter your name:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your name" required>
+                </div>
+
+                <br>
+
+                <div>
+                    <label>Gender:</label>
+
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="city">Select your city:</label>
+
+                    <select id="city" name="city">
+                        <option value="rajkot">Rajkot</option>
+                        <option value="surat">Surat</option>
+                        <option value="nadiad">Nadiad</option>
+                        <option value="vadodara">Vadodara</option>
+                        <option value="junagadh">Junagadh</option>
+                    </select>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="intro">Short Introduction:</label><br>
+                    <textarea id="intro" name="intro" rows="5" cols="50"
+                        placeholder="Write about yourself"></textarea>
+                </div>
+
+            </section>
+
+            <hr>
+
+            <section>
+
+                <h2>Skills</h2>
+
+                <h3>Programming Languages</h3>
+
+                <input type="checkbox" id="html" name="skills" value="HTML">
+                <label for="html">HTML</label>
+
+                <input type="checkbox" id="css" name="skills" value="CSS">
+                <label for="css">CSS</label>
+
+                <input type="checkbox" id="c" name="skills" value="C">
+                <label for="c">C</label>
+
+                <input type="checkbox" id="cpp" name="skills" value="C++">
+                <label for="cpp">C++</label>
+
+                <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+                <label for="javascript">JavaScript</label>
+
+                <h3>Frontend</h3>
+
+                <input type="checkbox" id="html5" name="frontend" value="HTML5">
+                <label for="html5">HTML5</label>
+
+                <input type="checkbox" id="css3" name="frontend" value="CSS3">
+                <label for="css3">CSS3</label>
+
+                <input type="checkbox" id="bootstrap" name="frontend" value="Bootstrap">
+                <label for="bootstrap">Bootstrap</label>
+
+                <input type="checkbox" id="react" name="frontend" value="React">
+                <label for="react">React</label>
+
+                <h3>Backend</h3>
+
+                <input type="checkbox" id="node" name="backend" value="Node.js">
+                <label for="node">Node.js</label>
+
+                <input type="checkbox" id="express" name="backend" value="Express.js">
+                <label for="express">Express.js</label>
+
+                <h3>Database</h3>
+
+                <input type="checkbox" id="mysql" name="database" value="MySQL">
+                <label for="mysql">MySQL</label>
+
+                <input type="checkbox" id="mongodb" name="database" value="MongoDB">
+                <label for="mongodb">MongoDB</label>
+
+                <h3>Tools</h3>
+
+                <input type="checkbox" id="git" name="tools" value="Git">
+                <label for="git">Git</label>
+
+                <input type="checkbox" id="github" name="tools" value="GitHub">
+                <label for="github">GitHub</label>
+
+                <input type="checkbox" id="vscode" name="tools" value="VS Code">
+                <label for="vscode">VS Code</label>
+
+            </section>
+
+            <hr>
+
+            <section>
+
+                <h2>Best Project</h2>
+
+                <div>
+                    <label for="projectdesc">Project Description</label><br>
+                    <textarea id="projectdesc" name="projectdesc" rows="5" cols="50"></textarea>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="technology">Technologies Used</label><br>
+                    <textarea id="technology" name="technology" rows="5" cols="50"></textarea>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="githublink">GitHub Project Link</label><br>
+                    <input type="url" id="githublink" name="githublink"
+                        placeholder="https://github.com/username/project">
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="profilelink">Coding Profile Link</label><br>
+                    <input type="url" id="profilelink" name="profilelink"
+                        placeholder="https://leetcode.com/username">
+                </div>
+
+            </section>
+
+            <hr>
+
+            <section>
+
+                <h2>Educational Information</h2>
+
+                <div>
+                    <label for="branch">Branch</label>
+
+                    <select id="branch" name="branch">
+                        <option>Computer Engineering</option>
+                        <option>Computer Science Engineering</option>
+                        <option>Information Technology</option>
+                        <option>Information & Communication Technology</option>
+                        <option>Electronics & Communication</option>
+                    </select>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="college">College Name</label>
+                    <input type="text" id="college" name="college">
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="year">Year</label>
+
+                    <select id="year" name="year">
+                        <option>1st</option>
+                        <option>2nd</option>
+                        <option>3rd</option>
+                        <option>4th</option>
+                    </select>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="result">Upload Result</label>
+                    <input type="file" id="result" name="result" accept="image/*" multiple>
+                </div>
+
+            </section>
+
+            <br>
+
+            <button type="submit">Submit Form</button>
+
+        </main>
+
+    </form>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 Tarana Joshi. All Rights Reserved.</p>
+        <p>Made with ❤️ using HTML</p>
+    </footer>
 
 </body>
 
